@@ -256,6 +256,11 @@
             color: white;
         }
 
+        .hero h1.hero-title-one-line {
+            white-space: nowrap;
+            font-size: clamp(1.15rem, 1.8vw, 1.75rem);
+        }
+
         .hero .tagline {
             font-size: 1.125rem;
             color: rgba(255,255,255,0.85);
@@ -1142,7 +1147,14 @@
 </head>
 <body>
 
-    <!-- SLIDE 1: Hero -->
+    <!-- SLIDE 1: Title -->
+    <header class="slide-hero hero">
+        <div class="hero-content">
+            <h1 class="hero-title-one-line" style="margin-bottom: 0;">Threekit for Mockfjärds & Dovista - Professional Services / Project (one time costs)</h1>
+        </div>
+    </header>
+
+    <!-- SLIDE 2: Hero -->
     <header class="slide-hero hero">
         <div class="hero-content">
             <div class="hero-logos">
@@ -1179,7 +1191,7 @@
         </div>
     </header>
 
-    <!-- SLIDE 2: Delivery Model -->
+    <!-- SLIDE 3: Delivery Model -->
     <section class="slide">
         <div class="container">
             <span class="section-label">Delivery Model</span>
@@ -1236,7 +1248,7 @@
         </div>
     </section>
 
-    <!-- SLIDE 3: User Journey -->
+    <!-- SLIDE 4: User Journey -->
     <section class="slide" style="background: var(--neutral-50);">
         <div class="container">
             <span class="section-label">User Experience</span>
@@ -1307,7 +1319,7 @@
         </div>
     </section>
 
-    <!-- SLIDE 4: Deliverables -->
+    <!-- SLIDE 5: Deliverables -->
     <section class="slide">
         <div class="container">
             <span class="section-label">What We'll Build</span>
@@ -1343,14 +1355,14 @@
                     <div class="deliverable-audience">Integration</div>
                     <ul class="deliverable-list">
                         <li>Session tracking & analytics</li>
-                        <li>HubSpot CRM integration</li>
+                        <li>Support for Hubspot Integration</li>
                         <li>Lead enrichment with preferences</li>
                         <li>Basic lead export API</li>
                     </ul>
                 </div>
                 <div class="deliverable-card highlight">
                     <div class="deliverable-number">4</div>
-                    <h3>SI Integration Support</h3>
+                    <h3>Thorit Support</h3>
                     <div class="deliverable-audience">40 Hours</div>
                     <ul class="deliverable-list">
                         <li>Complete API documentation</li>
@@ -1369,7 +1381,7 @@
         </div>
     </section>
 
-    <!-- SLIDE 5: Scope -->
+    <!-- SLIDE 6: Scope -->
     <section class="slide" style="background: var(--neutral-50);">
         <div class="container">
             <span class="section-label">Scope Definition</span>
@@ -1407,7 +1419,7 @@
                         <div class="scope-item">
                             <div class="scope-icon yes">✓</div>
                             <div>
-                                <strong>HubSpot Integration</strong>
+                                <strong>Leads & Insights API</strong>
                                 <p>Leads, contacts, session insights</p>
                             </div>
                         </div>
@@ -1421,7 +1433,7 @@
                         <div class="scope-item">
                             <div class="scope-icon yes">✓</div>
                             <div>
-                                <strong>SI Support (40 hrs)</strong>
+                                <strong>Thorit Support (40 hrs)</strong>
                                 <p>API docs, workshops</p>
                             </div>
                         </div>
@@ -1429,7 +1441,7 @@
                 </div>
                 <div class="scope-card">
                     <div class="scope-card-header out-scope">
-                        <h3>Phase 2 & Beyond : 4-6-8 months</h3>
+                        <h3>Suggestions (incremental) : 4-6-8 months</h3>
                         <p>Configuration & Quote Generation</p>
                     </div>
                     <div class="scope-card-body">
@@ -1486,7 +1498,7 @@
         </div>
     </section>
 
-    <!-- SLIDE 6: Investment -->
+    <!-- SLIDE 7: Investment -->
     <section class="slide">
         <div class="container">
             <span class="section-label">Investment</span>
@@ -1543,7 +1555,7 @@
         </div>
     </section>
 
-    <!-- SLIDE 7: Additional Brands (50% ramp) -->
+    <!-- SLIDE 8: Additional Brands (50% ramp) -->
     <section class="slide">
         <div class="container">
             <span class="section-label">Multi-Brand</span>
@@ -1576,7 +1588,14 @@
         </div>
     </section>
 
-    <!-- SLIDE 8: Dovistapres page 1 – Platform key terms -->
+    <!-- SLIDE 9: Software Subscription Commercials (title) -->
+    <header class="slide-hero hero">
+        <div class="hero-content">
+            <h1 class="hero-title-one-line" style="margin-bottom: 0;">Software Subscription Commercials for Dovista (Recurring)</h1>
+        </div>
+    </header>
+
+    <!-- SLIDE 10: Dovistapres page 1 – Platform key terms -->
     <section class="slide">
         <div class="container">
             <span class="section-label">Platform & subscription</span>
@@ -1598,7 +1617,7 @@
         </div>
     </section>
 
-    <!-- SLIDE 9: Dovistapres page 2 – Mockfjärds subscription -->
+    <!-- SLIDE 11: Dovistapres page 2 – Mockfjärds subscription -->
     <section class="slide">
         <div class="container">
             <span class="section-label">Platform & subscription</span>
@@ -1658,7 +1677,7 @@
         </div>
     </section>
 
-    <!-- SLIDE 10: Dovistapres page 3 – Dovista brands -->
+    <!-- SLIDE 12: Dovistapres page 3 – Dovista brands -->
     <section class="slide">
         <div class="container">
             <span class="section-label">Platform & subscription</span>
@@ -1675,10 +1694,11 @@
                     </ul>
                 </div>
             </div>
+            <p style="margin-top: 24px; font-weight: 700;"><strong>Upon request by Dovista and with confirmation of the number of brands that can be subscribed at the same time as Mockfjärds, a multi-brand / volume proposal can be offered</strong></p>
         </div>
     </section>
 
-    <!-- SLIDE 11: Scale diagram -->
+    <!-- SLIDE 13: Scale diagram -->
     <section class="slide diagram-slide">
         <div class="container">
             <h2>Scale</h2>
@@ -1686,7 +1706,7 @@
         </div>
     </section>
 
-    <!-- SLIDE 12: Timeline -->
+    <!-- SLIDE 14: Timeline -->
     <section class="slide" style="background: var(--neutral-50);">
         <div class="container">
             <span class="section-label">Implementation</span>
@@ -1752,7 +1772,7 @@
         </div>
     </section>
 
-    <!-- SLIDE 13: CTA -->
+    <!-- SLIDE 15: CTA -->
     <section class="slide-dark cta-section">
         <h2>Ready to Build the Industry Leading AI Visual Discovery Platform ?</h2>
         <p style="margin-bottom: 8px;"><strong>Next Steps :</strong></p>
@@ -1785,7 +1805,7 @@
             <button class="nav-prev" onclick="prevSlide()" aria-label="Previous slide">
                 <i data-lucide="chevron-left"></i>
             </button>
-            <span class="slide-counter">1 / 13</span>
+            <span class="slide-counter">1 / 15</span>
             <button class="nav-next" onclick="nextSlide()" aria-label="Next slide">
                 <i data-lucide="chevron-right"></i>
             </button>
