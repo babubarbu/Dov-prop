@@ -1727,7 +1727,72 @@
         </div>
     </section>
 
-    <!-- SLIDE 14: Timeline -->
+    <!-- SLIDE 14: Scale (SVG) -->
+    <section class="slide diagram-slide">
+        <div class="container">
+            <h2>Scale</h2>
+            <svg class="slide-diagram" viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" style="max-height: 65vh;">
+                <defs>
+                    <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#4A7C59;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#6B9B6A;stop-opacity:1" />
+                    </linearGradient>
+                    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+                        <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.15"/>
+                    </filter>
+                </defs>
+                <!-- Y-axis line + arrow -->
+                <line x1="75" y1="250" x2="75" y2="30" stroke="#4A4A45" stroke-width="1.5"/>
+                <path d="M75 30 L71 38 L79 38 Z" fill="#4A4A45"/>
+                <!-- X-axis line + arrow -->
+                <line x1="75" y1="250" x2="490" y2="250" stroke="#4A4A45" stroke-width="1.5"/>
+                <path d="M490 250 L482 246 L482 254 Z" fill="#4A4A45"/>
+                <!-- Y-axis label: Brands -->
+                <text x="28" y="145" fill="#4A4A45" font-family="Inter, sans-serif" font-size="11" font-weight="600" letter-spacing="0.08em" transform="rotate(-90 28 145)">BRANDS</text>
+                <!-- X-axis label: Capabilities -->
+                <text x="280" y="288" fill="#4A4A45" font-family="Inter, sans-serif" font-size="11" font-weight="600" letter-spacing="0.08em" text-anchor="middle">CAPABILITIES</text>
+
+                <!-- Capability blocks (X-axis) -->
+                <g filter="url(#shadow)">
+                    <rect x="90" y="195" width="88" height="48" rx="8" fill="#2A5A5C"/>
+                    <text x="134" y="218" fill="white" font-family="Inter, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Inspire</text>
+                    <text x="134" y="232" fill="rgba(255,255,255,0.9)" font-family="Inter, sans-serif" font-size="9" text-anchor="middle">(Inspiration)</text>
+
+                    <rect x="178" y="195" width="88" height="48" rx="8" fill="#1D4749"/>
+                    <text x="222" y="225" fill="white" font-family="Inter, sans-serif" font-size="12" font-weight="600" text-anchor="middle">AI Vision</text>
+
+                    <rect x="266" y="195" width="88" height="48" rx="8" fill="#353532"/>
+                    <text x="310" y="225" fill="white" font-family="Inter, sans-serif" font-size="12" font-weight="600" text-anchor="middle">AI Config</text>
+
+                    <rect x="354" y="195" width="88" height="48" rx="8" fill="#2A2A28"/>
+                    <text x="398" y="225" fill="white" font-family="Inter, sans-serif" font-size="12" font-weight="600" text-anchor="middle">AI Quote</text>
+                </g>
+
+                <!-- Phase 1 dotted outline (Inspire + AI Vision) -->
+                <rect x="88" y="193" width="180" height="52" rx="8" fill="none" stroke="#4A7C59" stroke-width="2" stroke-dasharray="6 4" opacity="0.9"/>
+
+                <!-- Brands blocks (Y-axis): Mockfjärds -->
+                <g filter="url(#shadow)">
+                    <rect x="8" y="208" width="62" height="36" rx="6" fill="#1D4749"/>
+                    <text x="39" y="230" fill="white" font-family="Inter, sans-serif" font-size="10" font-weight="600" text-anchor="middle">Mockfjärds</text>
+                </g>
+                <!-- Unnamed brand blocks -->
+                <rect x="8" y="166" width="62" height="36" rx="6" fill="#E8E8E4" filter="url(#shadow)"/>
+                <text x="39" y="188" fill="#9C9C96" font-family="Inter, sans-serif" font-size="14" text-anchor="middle">?</text>
+                <rect x="8" y="124" width="62" height="36" rx="6" fill="#E8E8E4" filter="url(#shadow)"/>
+                <text x="39" y="146" fill="#9C9C96" font-family="Inter, sans-serif" font-size="14" text-anchor="middle">?</text>
+                <rect x="8" y="82" width="62" height="36" rx="6" fill="#E8E8E4" filter="url(#shadow)"/>
+                <text x="39" y="104" fill="#9C9C96" font-family="Inter, sans-serif" font-size="12" text-anchor="middle">...</text>
+
+                <!-- Green 45° scale arrow -->
+                <path d="M 95 240 Q 200 120 400 55" fill="none" stroke="url(#arrowGrad)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+                <path d="M 400 55 L 388 52 L 392 64 Z" fill="#4A7C59"/>
+            </svg>
+            <p style="margin-top: 12px; font-size: 0.8rem; color: var(--neutral-500);">Dotted outline: Phase 1 for Mockfjärds (Inspire + AI Vision).</p>
+        </div>
+    </section>
+
+    <!-- SLIDE 15: Timeline -->
     <section class="slide" style="background: var(--neutral-50);">
         <div class="container">
             <span class="section-label">Implementation</span>
@@ -1793,7 +1858,7 @@
         </div>
     </section>
 
-    <!-- SLIDE 15: CTA -->
+    <!-- SLIDE 16: CTA -->
     <section class="slide-dark cta-section">
         <h2>Ready to Build the Industry Leading AI Visual Discovery Platform ?</h2>
         <p style="margin-bottom: 8px;"><strong>Next Steps :</strong></p>
@@ -1826,7 +1891,7 @@
             <button class="nav-prev" onclick="prevSlide()" aria-label="Previous slide">
                 <i data-lucide="chevron-left"></i>
             </button>
-            <span class="slide-counter">1 / 15</span>
+            <span class="slide-counter">1 / 16</span>
             <button class="nav-next" onclick="nextSlide()" aria-label="Next slide">
                 <i data-lucide="chevron-right"></i>
             </button>
