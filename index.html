@@ -1156,18 +1156,133 @@
             height: 20px;
             stroke-width: 2;
         }
+
+        /* Matrix table - compact for wide data */
+        .matrix-table { font-size: 0.7rem; }
+        .matrix-table th, .matrix-table td { padding: 6px 8px; }
+        .matrix-table .total-row { background: var(--neutral-100); font-weight: 600; }
     </style>
 </head>
 <body>
 
-    <!-- SLIDE 1: Title -->
+    <!-- SLIDE 1: Proposal title (hero) -->
+    <header class="slide-hero hero">
+        <div class="hero-content">
+            <h1 class="hero-title-one-line" style="margin-bottom: 0;">Threekit - Updated Proposal for Dovista</h1>
+        </div>
+    </header>
+
+    <!-- SLIDE 2: Dovista Brand–Product Matrix -->
+    <section class="slide">
+        <div class="container">
+            <span class="section-label">Dovista</span>
+            <h2>Dovista Brand–Product Matrix</h2>
+            <div class="table-wrapper" style="overflow-x: auto;">
+                <table class="data-table matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Brand</th>
+                            <th>Product Categories</th>
+                            <th>Description</th>
+                            <th>Business Model</th>
+                            <th>Product Lines</th>
+                            <th>Markets</th>
+                            <th>Region</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Mockfjärds</td><td>Wood Windows, Wood/Alu Windows, Wood/Alu Doors</td><td>Specialized in cold-climate performance windows</td><td>Resell B2B, Installer</td><td>Svenska Fönster, Natre, VELFAC</td><td>Sweden</td><td>North</td></tr>
+                        <tr><td>Svenska Fönster</td><td>Wood Windows, Wood/Alu Windows</td><td>Traditional Swedish window designs for heritage buildings</td><td>Manufacturer, Resell B2B</td><td>Svenska Fönster</td><td>Sweden</td><td>North</td></tr>
+                        <tr><td>Natre</td><td>Wood Windows, Wood Doors, Wood/Alu Windows</td><td>Traditional Norwegian design with superior insulation</td><td>Manufacturer, Resell B2B</td><td>Svenska Fönster, Natre</td><td>Norway</td><td>North</td></tr>
+                        <tr><td>VELFAC</td><td>Wood/Alu Windows, Wood/Alu Doors</td><td>Slim-profile composite windows with distinctive design</td><td>Manufacturer, Resell B2B</td><td>KRONE, VELFAC, Rationel</td><td>Germany, Sweden, Denmark, Norway, UK</td><td>North</td></tr>
+                        <tr><td>Dovista UK</td><td>PVC Windows, PVC Doors, Alu Windows, Alu Doors</td><td>Installation of uPVC doors and windows</td><td>Installer</td><td>Dobroplast, Slovaktual</td><td>United Kingdom</td><td>North</td></tr>
+                        <tr><td>KRONE</td><td>Wood Windows, Wood/Alu Windows, Wood/Alu Doors</td><td>High-end wood solutions with German engineering</td><td>Manufacturer, Installer</td><td>KRONE</td><td>Sweden, Denmark, UK, Ireland</td><td>North</td></tr>
+                        <tr><td>Rationel</td><td>Wood Windows, Wood Doors, Wood/Alu Windows, Wood/Alu Doors</td><td>Contemporary Scandinavian design, sustainability focus</td><td>Manufacturer, Resell B2B</td><td>Rationel</td><td>Denmark, UK, Ireland</td><td>North</td></tr>
+                        <tr><td>Dobroplast</td><td>PVC Windows, PVC Doors, PVC/Alu Windows</td><td>Value-oriented PVC for Eastern European markets</td><td>Manufacturer</td><td>Dobroplast</td><td>Poland</td><td>South</td></tr>
+                        <tr><td>Slovaktual</td><td>PVC Windows, PVC Doors, Alu Windows, Alu Doors</td><td>Leading Slovak manufacturer, thermal efficiency focus</td><td>Manufacturer</td><td>Slovaktual</td><td>Slovakia</td><td>South</td></tr>
+                        <tr class="total-row"><td>TOTALS</td><td>Windows + Doors (Wood, Wood/Alu, PVC, PVC/Alu, Alu)</td><td>—</td><td>Manufacturer, Resell B2B, Installer</td><td>7 distinct product lines</td><td>SE, NO, DK, DE, UK, IE, PL, SK (8 markets)</td><td>North + South</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 3: Cross-Sell Map -->
+    <section class="slide">
+        <div class="container">
+            <span class="section-label">Dovista</span>
+            <h2>Cross-Sell Map</h2>
+            <p class="section-intro">Module 3 (Product Line) onboarded once — shared across brands. Module 4 (Brand Config) is per brand.</p>
+            <div class="table-wrapper" style="overflow-x: auto;">
+                <table class="data-table matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Brand ↓ / Product Line →</th>
+                            <th>Svenska Fönster</th>
+                            <th>Natre</th>
+                            <th>VELFAC</th>
+                            <th>KRONE</th>
+                            <th>Rationel</th>
+                            <th>Dobroplast</th>
+                            <th>Slovaktual</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Mockfjärds</td><td>✓</td><td>✓</td><td>✓</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>Svenska Fönster</td><td>✓</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>Natre</td><td>✓</td><td>✓</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>VELFAC</td><td>—</td><td>—</td><td>✓</td><td>✓</td><td>✓</td><td>—</td><td>—</td></tr>
+                        <tr><td>Dovista UK</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>✓</td><td>✓</td></tr>
+                        <tr><td>KRONE</td><td>—</td><td>—</td><td>—</td><td>✓</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>Rationel</td><td>—</td><td>—</td><td>—</td><td>—</td><td>✓</td><td>—</td><td>—</td></tr>
+                        <tr><td>Dobroplast</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>✓</td><td>—</td></tr>
+                        <tr><td>Slovaktual</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>✓</td></tr>
+                        <tr class="total-row"><td># Brands using this line</td><td>3</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="margin-top: 16px; padding: 12px 16px; background: var(--accent-light); border-left: 4px solid var(--success); font-size: 0.8125rem; color: var(--neutral-700);"><strong>Key insight:</strong> Onboard Svenska Fönster (M3) once → serves Mockfjärds + Svenska Fönster brand + Natre brand. Onboard VELFAC line once → serves Mockfjärds + VELFAC brand.</p>
+        </div>
+    </section>
+
+    <!-- SLIDE 4: Phasing Strategy for Dovista -->
+    <section class="slide">
+        <div class="container">
+            <span class="section-label">Dovista</span>
+            <h2>Phasing Strategy for Dovista</h2>
+            <p class="section-intro">Product-line-centric rollout: onboard lines, then brands configure on top.</p>
+            <div class="table-wrapper" style="overflow-x: auto;">
+                <table class="data-table matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Phase</th>
+                            <th>What It Delivers</th>
+                            <th>Brands / Lines / Markets</th>
+                            <th>AI Insights Growth</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Phase 1: Foundation + First Brand</strong></td><td>Complete AI Discovery + Image Edit for one brand, one line, one market. Live API for Thorit.</td><td>e.g. Mockfjärds / Svenska Fönster / Sweden</td><td>Base instrumentation live, first data flowing</td></tr>
+                        <tr><td><strong>Phase 2: Expand Lines (same brand)</strong></td><td>Same brand now offers all its product lines. Richer recommendations, more matches.</td><td>e.g. Mockfjärds adds Natre + VELFAC lines</td><td>More product data, ML tuning starts</td></tr>
+                        <tr><td><strong>Phase 3: Expand Brands (North)</strong></td><td>New brands go live fast — their lines are already onboarded. Config-only.</td><td>VELFAC, Natre, KRONE, Rationel, Dovista UK + North markets</td><td>Cross-brand analytics, demand signals</td></tr>
+                        <tr><td><strong>Phase 4: Add Doors</strong></td><td>AI detects and replaces both windows AND doors.</td><td>All brands selling doors</td><td>New category data, expanded TAM signals</td></tr>
+                        <tr><td><strong>Phase 5: South Region (PVC)</strong></td><td>PVC lines onboarded. South region markets live.</td><td>Dobroplast, Slovaktual + Poland, Slovakia</td><td>North vs South comparison, full coverage</td></tr>
+                        <tr><td><strong>Phase 6: B2B Enablement</strong></td><td>Dealer/installer journey. Different UX, outputs, project management.</td><td>All Manufacturer-model brands</td><td>B2B vs B2C conversion analytics</td></tr>
+                        <tr><td><strong>Phase 7: Full AI Insights</strong></td><td>Complete analytics, ML tuning, BI dashboards, market intelligence.</td><td>All brands × all markets × all lines</td><td>Strategic intelligence for Dovista leadership</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 5: Title -->
     <header class="slide-hero hero">
         <div class="hero-content">
             <h1 class="hero-title-one-line" style="margin-bottom: 0;">Threekit for Mockfjärds & Dovista - Professional Services / Project (one time costs)</h1>
         </div>
     </header>
 
-    <!-- SLIDE 2: Hero -->
+    <!-- SLIDE 6: Hero -->
     <header class="slide-hero hero">
         <div class="hero-content">
             <div class="hero-logos">
@@ -1175,36 +1290,32 @@
                 <div class="divider"></div>
                 <span>Threekit</span>
             </div>
-            <div class="hero-badge">Phase 1 — Headless / API-First</div>
+            <div class="hero-badge">Phases 1-2 — Headless / API-First</div>
             <h1>AI Visual Discovery<br>Platform & APIs</h1>
             <p class="tagline">Backend AI services for image-based window discovery, visualization, and lead intelligence — ready for your SI to integrate.</p>
             <div class="hero-stats">
                 <div class="hero-stat">
-                    <div class="number">524</div>
-                    <div class="label">Hours</div>
-                </div>
-                <div class="hero-stat">
-                    <div class="number">€102K</div>
+                    <div class="number">€134K</div>
                     <div class="label">Investment</div>
                 </div>
                 <div class="hero-stat">
-                    <div class="number">8</div>
+                    <div class="number">8-10</div>
                     <div class="label">Weeks</div>
                 </div>
                 <div class="hero-stat">
-                    <div class="number">May</div>
+                    <div class="number">May-June</div>
                     <div class="label">Go-Live</div>
                 </div>
             </div>
         </div>
         <div class="speaker-notes">
             <p><strong>Opening:</strong> This is Phase 1 of a two-phase engagement. We're delivering the AI platform and APIs — headless — so Dovista's SI can build the front-end.</p>
-            <p><strong>Key point:</strong> 524 hours, €102,180, targeting early May go-live. This is discovery + visualization only. Configuration and quotes are Phase 2.</p>
+            <p><strong>Key point:</strong> €134K, targeting May–June go-live. This is discovery + visualization only. Configuration and quotes are Phase 2.</p>
             <p><strong>Why headless:</strong> Dovista already has SI relationships. We provide the AI brains, they build the UI.</p>
         </div>
     </header>
 
-    <!-- SLIDE 3: Delivery Model -->
+    <!-- SLIDE 7: Delivery Model -->
     <section class="slide">
         <div class="container">
             <span class="section-label">Delivery Model</span>
@@ -1261,12 +1372,12 @@
         </div>
     </section>
 
-    <!-- SLIDE 4: User Journey -->
+    <!-- SLIDE 8: User Journey -->
     <section class="slide" style="background: var(--neutral-50);">
         <div class="container">
             <span class="section-label">User Experience</span>
             <h2>The Customer Journey</h2>
-            <p class="section-intro">Phase 1 delivers discovery and visualization. Phase 2 adds configuration and quotes.</p>
+            <p class="section-intro">Phases 1-7 delivers discovery and visualization.</p>
 
             <div class="journey-visual">
                 <div class="journey-steps">
@@ -1307,7 +1418,6 @@
                             <i data-lucide="sliders"></i>
                         </div>
                         <h5>Configure</h5>
-                        <p>Phase 2</p>
                     </div>
                     <div class="journey-arrow">→</div>
                     <div class="journey-step phase2">
@@ -1315,14 +1425,13 @@
                             <i data-lucide="file-text"></i>
                         </div>
                         <h5>Quote</h5>
-                        <p>Phase 2</p>
                     </div>
                 </div>
             </div>
 
             <p style="margin-top: 20px; font-size: 0.8125rem; color: var(--neutral-500);">
-                <strong>Phase 1 (green):</strong> Discovery, image upload, AI recommendations, visualization, lead capture<br>
-                <strong>Phase 2 (gray):</strong> Product configuration, quote generation (PDF + interactive)
+                <strong>Phases 1-7 (green):</strong> Discovery, image upload, AI recommendations, visualization, lead capture<br>
+                <strong>Later (gray):</strong> Product configuration, quote generation (PDF + interactive)
             </p>
         </div>
         <div class="speaker-notes">
@@ -1332,11 +1441,11 @@
         </div>
     </section>
 
-    <!-- SLIDE 5: Deliverables -->
+    <!-- SLIDE 9: Deliverables -->
     <section class="slide">
         <div class="container">
             <span class="section-label">What We'll Build</span>
-            <h2>Phase 1: AI Visual Discovery APIs</h2>
+            <h2>Phases 1-2: AI Visual Discovery APIs</h2>
             <p class="section-intro">Backend AI services and APIs for the Mockfjärds visual discovery experience.</p>
 
             <div class="deliverables-grid">
@@ -1394,229 +1503,88 @@
         </div>
     </section>
 
-    <!-- SLIDE 6: Scope -->
-    <section class="slide" style="background: var(--neutral-50);">
-        <div class="container">
-            <span class="section-label">Scope Definition</span>
-            <h2>Phase 1 vs Phase 2</h2>
-            <p class="section-intro">Clear scope boundaries for the headless AI platform delivery.</p>
-
-            <div class="scope-grid">
-                <div class="scope-card">
-                    <div class="scope-card-header in-scope">
-                        <h3>Phase 1 (This SOW)</h3>
-                        <p>AI Discovery Platform & APIs</p>
-                    </div>
-                    <div class="scope-card-body">
-                        <div class="scope-item">
-                            <div class="scope-icon api">API</div>
-                            <div>
-                                <strong>AI Image Analysis</strong>
-                                <p>Window detection for residential homes</p>
-                            </div>
-                        </div>
-                        <div class="scope-item">
-                            <div class="scope-icon api">API</div>
-                            <div>
-                                <strong>Visualization Rendering</strong>
-                                <p>Windows on customer home images</p>
-                            </div>
-                        </div>
-                        <div class="scope-item">
-                            <div class="scope-icon api">API</div>
-                            <div>
-                                <strong>Recommendation Engine</strong>
-                                <p>Style-matched product suggestions</p>
-                            </div>
-                        </div>
-                        <div class="scope-item">
-                            <div class="scope-icon yes">✓</div>
-                            <div>
-                                <strong>Leads & Insights API</strong>
-                                <p>Leads, contacts, session insights</p>
-                            </div>
-                        </div>
-                        <div class="scope-item">
-                            <div class="scope-icon yes">✓</div>
-                            <div>
-                                <strong>7 Languages (i18n)</strong>
-                                <p>SE, NO, DK, EN, FR, PL, FI</p>
-                            </div>
-                        </div>
-                        <div class="scope-item">
-                            <div class="scope-icon yes">✓</div>
-                            <div>
-                                <strong>Thorit Support (40 hrs)</strong>
-                                <p>API docs, workshops</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="scope-card">
-                    <div class="scope-card-header out-scope">
-                        <h3>Suggestions (incremental) : 4-6-8 months</h3>
-                        <p>Configuration & Quote Generation</p>
-                    </div>
-                    <div class="scope-card-body">
-                        <div class="scope-item">
-                            <div class="scope-icon no">→</div>
-                            <div>
-                                <strong>Product Configuration API</strong>
-                                <p>Size, color, accessories, rules</p>
-                            </div>
-                        </div>
-                        <div class="scope-item">
-                            <div class="scope-icon no">→</div>
-                            <div>
-                                <strong>Quote Generation</strong>
-                                <p>PDF + Interactive digital quotes</p>
-                            </div>
-                        </div>
-                        <div class="scope-item">
-                            <div class="scope-icon no">→</div>
-                            <div>
-                                <strong>Front-End UI</strong>
-                                <p>Thorit responsibility</p>
-                            </div>
-                        </div>
-                        <div class="scope-item">
-                            <div class="scope-icon no">→</div>
-                            <div>
-                                <strong>B2B Property Manager</strong>
-                                <p>Multi-story, bulk quotes</p>
-                            </div>
-                        </div>
-                        <div class="scope-item">
-                            <div class="scope-icon no">→</div>
-                            <div>
-                                <strong>Pricing Integration</strong>
-                                <p>Real-time pricing integration</p>
-                            </div>
-                        </div>
-                        <div class="scope-item">
-                            <div class="scope-icon no">→</div>
-                            <div>
-                                <strong>Additional Brands</strong>
-                                <p>Svenska Fönster, Velfac, etc.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="speaker-notes">
-            <p><strong>What's IN:</strong> AI discovery, visualization, recommendations, HubSpot, 7 languages, SI support.</p>
-            <p><strong>What's OUT:</strong> Configuration, quotes, UI (SI does that), B2B flow, Torit pricing, other brands.</p>
-            <p><strong>Front-end:</strong> Explicitly out — this is headless. SI builds the UI using our APIs.</p>
-        </div>
-    </section>
-
-    <!-- SLIDE 7: Investment -->
+    <!-- SLIDE 10: Investment -->
     <section class="slide">
         <div class="container">
             <span class="section-label">Investment</span>
-            <h2>Phase 1 Pricing</h2>
+            <h2>Phases 1-2 Pricing</h2>
 
             <div class="investment-highlight">
-                <div class="amount">€102,180</div>
-                <div class="label">Phase 1 Professional Services</div>
-                <div class="investment-details">
-                    <div class="investment-detail">
-                        <div class="value">524</div>
-                        <div class="desc">Total Hours</div>
-                    </div>
-                    <div class="investment-detail">
-                        <div class="value">€195</div>
-                        <div class="desc">Blended Rate</div>
-                    </div>
-                    <div class="investment-detail">
-                        <div class="value">8</div>
-                        <div class="desc">Weeks</div>
-                    </div>
-                </div>
+                <div class="amount">€134,726</div>
+                <div class="label">Phases 1-2 Professional Services</div>
             </div>
 
             <div class="table-wrapper">
                 <table class="data-table">
                     <thead>
                         <tr>
-                            <th>Work Area</th>
-                            <th>Hours</th>
+                            <th>Item</th>
                             <th>Investment</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Discovery & Planning</td><td class="count">32</td><td>€6,240</td></tr>
-                        <tr><td>AI Body of Knowledge</td><td class="count">80</td><td>€15,600</td></tr>
-                        <tr><td>AI Agent Configuration</td><td class="count">72</td><td>€14,040</td></tr>
-                        <tr><td>Image Analysis & Visualization</td><td class="count">120</td><td>€23,400</td></tr>
-                        <tr><td>Lead Intelligence</td><td class="count">56</td><td>€10,920</td></tr>
-                        <tr><td>Multi-Language (i18n)</td><td class="count">60</td><td>€11,700</td></tr>
-                        <tr><td>QA & Testing</td><td class="count">40</td><td>€7,800</td></tr>
-                        <tr><td>SI Consulting & Integration</td><td class="count">40</td><td>€7,800</td></tr>
-                        <tr><td>Training & Documentation</td><td class="count">24</td><td>€4,680</td></tr>
-                        <tr class="total-row"><td><strong>Phase 1 Total</strong></td><td class="count"><strong>524</strong></td><td><strong>€102,180</strong></td></tr>
+                        <tr><td>Mockfjärds 1 product line</td><td>€74,295</td></tr>
+                        <tr><td>All product lines</td><td>€17,550</td></tr>
+                        <tr><td>Insights across Brands / Market</td><td>€13,650</td></tr>
+                        <tr><td>API Packaging + Docs + Training</td><td>€4,875</td></tr>
+                        <tr class="total-row"><td><strong>SUBTOTAL</strong></td><td><strong>€110,370</strong></td></tr>
+                        <tr><td>PM Overhead</td><td>€16,556</td></tr>
+                        <tr><td>Q&A / Testing</td><td>€7,800</td></tr>
+                        <tr class="total-row"><td><strong>TOTAL (Phases 1-2)</strong></td><td><strong>€134,726</strong></td></tr>
                     </tbody>
                 </table>
             </div>
         </div>
         <div class="speaker-notes">
-            <p><strong>Investment:</strong> €102,180 for 524 hours at €195 blended rate.</p>
-            <p><strong>Biggest areas:</strong> Image Analysis (120 hrs), Body of Knowledge (80 hrs), AI Agent (72 hrs).</p>
-            <p><strong>Phase 2 preview:</strong> Configuration + quotes adds ~€32K. Total program ~€134K.</p>
-            <p><strong>No UI:</strong> Note there's no Front-End Developer cost — that's SI responsibility.</p>
+            <p><strong>Investment:</strong> €134,726 total for Phases 1-2 Professional Services.</p>
+            <p><strong>No UI:</strong> Note there's no Front-End Developer cost — that's Thorit responsibility.</p>
         </div>
     </section>
 
-    <!-- SLIDE 8: Additional Brands (50% ramp) -->
+    <!-- SLIDE 11: Investment Phases 3-7 -->
     <section class="slide">
         <div class="container">
-            <span class="section-label">Multi-Brand</span>
-            <h2>Investment for Additional Brands - Professional Services</h2>
-            <p class="section-intro">Breakdown: <strong>foundational</strong> (non–brand specific) vs <strong>brand specific</strong>. First brand estimate: 60% foundational. Additional brand: 20% of cost to adjust the foundation.</p>
+            <span class="section-label">Investment</span>
+            <h2>Phases 3-7 Pricing</h2>
 
-            <div class="multi-brand-grid">
-                <div class="brand-card first">
-                    <div class="brand-label">First brand (pilot)</div>
-                    <div class="brand-amount">€102,180</div>
-                    <div class="brand-ramp">100% — Full Phase 1 scope</div>
-                    <div class="brand-note">Mockfjärds: AI Visual Discovery, APIs, HubSpot, i18n, Thorit support</div>
-                    <div class="brand-breakdown">
-                        <strong>60% foundational</strong> (non–brand specific): €61,308<br>
-                        <strong>40% brand specific</strong>: €40,872
-                    </div>
-                </div>
-                <div class="brand-card">
-                    <div class="brand-label">First additional brand</div>
-                    <div class="brand-amount">€51,090</div>
-                    <div class="brand-ramp">50% ramp</div>
-                    <div class="brand-note">Same scope; reduced effort via reuse. <strong>Further additional brands:</strong> costs to be evaluated after delivery of the first brand.</div>
-                    <div class="brand-breakdown">
-                        <strong>20% foundation adjustment</strong>: €10,218<br>
-                        <strong>80% brand specific</strong>: €40,872
-                    </div>
-                </div>
+            <div class="investment-highlight">
+                <div class="amount">€176,246</div>
+                <div class="label">Phases 3-7 Professional Services</div>
             </div>
 
-            <div class="ramp-summary">
-                <strong>Example:</strong> 2 brands (Mockfjärds + 1 additional) = €153,270 total. Pricing for a 3rd brand and beyond will be proposed after the first brand is live.
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Investment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>3 additional brands (inc Krone Windows)</td><td>€39,195</td></tr>
+                        <tr><td>Krone doors + Natre Doors</td><td>€17,580</td></tr>
+                        <tr><td>Dobroplast & Slovaktual doors & windows</td><td>€49,140</td></tr>
+                        <tr><td>B2B</td><td>€14,625</td></tr>
+                        <tr><td>Insights across Brands / Market</td><td>€21,060</td></tr>
+                        <tr><td>API Packaging + Docs + Training</td><td>€4,875</td></tr>
+                        <tr class="total-row"><td><strong>SUBTOTAL</strong></td><td><strong>€146,475</strong></td></tr>
+                        <tr><td>PM Overhead</td><td>€21,971</td></tr>
+                        <tr><td>Q&A / Testing</td><td>€7,800</td></tr>
+                        <tr class="total-row"><td><strong>TOTAL (Phases 3-7)</strong></td><td><strong>€176,246</strong></td></tr>
+                    </tbody>
+                </table>
             </div>
-        </div>
-        <div class="speaker-notes">
-            <p><strong>Ramp:</strong> Only the first additional brand gets the 50% ramp. We don't commit pricing for 3rd+ brands yet — that will be evaluated after the first brand is delivered.</p>
-            <p><strong>Scope:</strong> First additional brand gets same Phase 1 deliverables; effort is lower due to reuse.</p>
-            <p><strong>Dovista context:</strong> 14 brands — we lock in ramp for brand #2; further rollout pricing after we've worked with the first.</p>
         </div>
     </section>
 
-    <!-- SLIDE 9: Software Subscription Commercials (title) -->
+    <!-- SLIDE 12: Software Subscription Commercials (title) -->
     <header class="slide-hero hero">
         <div class="hero-content">
             <h1 class="hero-title-one-line" style="margin-bottom: 0;">Software Subscription Commercials for Dovista (Recurring)</h1>
         </div>
     </header>
 
-    <!-- SLIDE 10: Dovistapres page 1 – Platform key terms -->
+    <!-- SLIDE 13: Dovistapres page 1 – Platform key terms -->
     <section class="slide">
         <div class="container">
             <span class="section-label">Platform & subscription</span>
@@ -1638,18 +1606,18 @@
         </div>
     </section>
 
-    <!-- SLIDE 11: Dovistapres page 2 – Mockfjärds subscription -->
+    <!-- SLIDE 14: Software subscription – Dovista (from subscription.txt) -->
     <section class="slide">
         <div class="container">
             <span class="section-label">Platform & subscription</span>
-            <h2>Software subscription – Mockfjärds</h2>
+            <h2>Software subscription – Dovista</h2>
             <p class="section-intro">For signature at latest by March 6, 2026.</p>
 
             <div class="table-wrapper">
                 <table class="data-table">
                     <thead>
                         <tr>
-                            <th>Mockfjärds subscription (modular)</th>
+                            <th>Dovista subscription</th>
                             <th>QTY</th>
                             <th>List price</th>
                             <th>Net total</th>
@@ -1657,21 +1625,22 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>1/ Threekit A.I. (modular)</strong><br>Platform: enterprise hosting & delivery, API, 1 endpoint · 50,000 annual interactions · Analytics</td>
+                            <td><strong>Platform License</strong><br>Enterprise hosting & delivery infrastructure, API, 1 endpoint · Threekit A.I. & Visual Configuration · Access to analytics and usage data · Standard Support</td>
                             <td class="count">1</td>
-                            <td>88,500€</td>
-                            <td><strong>57,525€</strong><br><span style="font-size:0.75rem;color:var(--neutral-500)">35% discount</span></td>
+                            <td>145,500€</td>
+                            <td><strong>94,250€</strong><br><span style="font-size:0.75rem;color:var(--neutral-500)">Subject to Terms & Conditions</span></td>
                         </tr>
                         <tr>
-                            <td><strong>2/ Threekit Visual Configuration (modular)</strong><br>Platform: enterprise hosting & delivery, API, 1 endpoint · Analytics</td>
-                            <td class="count">1</td>
-                            <td>88,500€</td>
-                            <td><strong>57,525€</strong><br><span style="font-size:0.75rem;color:var(--neutral-500)">35% discount</span></td>
+                            <td><strong>1 Product Group</strong> with 50,000 Annual Interactions<br><span style="font-size:0.75rem;color:var(--neutral-500)">20,200€ per Product Group (1 at a time) · 18,150€ (groups of 3) · 16,100€ (groups of 5+)</span></td>
+                            <td class="count">—</td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr class="total-row">
-                            <td colspan="2"><strong>Subtotal modular</strong></td>
+                            <td><strong>Example: Mockfjärds (Phase One)</strong> — Platform License + 3 Product Groups</td>
+                            <td class="count">1</td>
                             <td></td>
-                            <td><strong>115,050€</strong></td>
+                            <td><strong>148,700€</strong></td>
                         </tr>
                     </tbody>
                 </table>
@@ -1680,16 +1649,16 @@
                 <table class="data-table">
                     <thead>
                         <tr>
-                            <th>Mockfjärds subscription (combined)</th>
+                            <th>Group subscription (7 Product Groups)</th>
                             <th>QTY</th>
                             <th>Net total</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Threekit A.I. & Threekit Visual Configuration (1 & 2 combined, subscribed concurrently)</td>
+                            <td>Dovista Platform License and 7 Product Groups subscribed altogether at once in March</td>
                             <td class="count">1</td>
-                            <td><strong>80,535€</strong><br><span style="font-size:0.75rem;color:var(--neutral-500)">30% additional discount</span></td>
+                            <td><strong>206,950€</strong></td>
                         </tr>
                     </tbody>
                 </table>
@@ -1698,7 +1667,7 @@
         </div>
     </section>
 
-    <!-- SLIDE 12: Dovistapres page 3 – Dovista brands -->
+    <!-- SLIDE 15: Dovistapres page 3 – Dovista brands -->
     <section class="slide">
         <div class="container">
             <span class="section-label">Platform & subscription</span>
@@ -1719,7 +1688,7 @@
         </div>
     </section>
 
-    <!-- SLIDE 13: Scale (SVG) -->
+    <!-- SLIDE 16: Scale (SVG) -->
     <section class="slide diagram-slide">
         <div class="container">
             <h2>Scale</h2>
@@ -1779,12 +1748,12 @@
         </div>
     </section>
 
-    <!-- SLIDE 14: Timeline -->
+    <!-- SLIDE 17: Timeline -->
     <section class="slide" style="background: var(--neutral-50);">
         <div class="container">
             <span class="section-label">Implementation</span>
-            <h2>Phase 1 Timeline</h2>
-            <p class="section-intro">8-week delivery for headless AI platform with SI integration support.</p>
+            <h2>Phases 1 & 2 Timeline</h2>
+            <p class="section-intro">8–10 week delivery for headless AI platform with SI integration support.</p>
 
             <div class="timeline">
                 <div class="timeline-item">
@@ -1814,7 +1783,7 @@
                 <div class="timeline-item">
                     <div class="timeline-dot">3</div>
                     <div class="timeline-content">
-                        <h4>APIs Ready <span class="badge badge-later">Apr 13</span></h4>
+                        <h4>APIs Ready <span class="badge badge-later">Late Apr</span></h4>
                         <p>Full API suite ready for SI integration. Workshop #2 and documentation handoff.</p>
                         <div class="phase-tags">
                             <span class="tag">API Complete</span>
@@ -1826,7 +1795,7 @@
                 <div class="timeline-item">
                     <div class="timeline-dot">4</div>
                     <div class="timeline-content">
-                        <h4>Integration & Launch <span class="badge badge-later">Early May</span></h4>
+                        <h4>Integration & Launch <span class="badge badge-later">May</span></h4>
                         <p>SI integration support, QA, training, and production deployment.</p>
                         <div class="phase-tags">
                             <span class="tag">SI Integration</span>
@@ -1839,13 +1808,13 @@
         </div>
         <div class="speaker-notes">
             <p><strong>Kickoff:</strong> March 2. First SI workshop in week 1-2.</p>
-            <p><strong>APIs Ready:</strong> April 13. This is when SI can complete their integration.</p>
-            <p><strong>Go-Live:</strong> Early May. Gives SI 2-3 weeks to finish UI after APIs are ready.</p>
+            <p><strong>APIs Ready:</strong> Late April. This is when SI can complete their integration.</p>
+            <p><strong>Go-Live:</strong> May. Gives SI 2-3 weeks to finish UI after APIs are ready.</p>
             <p><strong>Critical:</strong> SI needs to be identified and available starting Week 2.</p>
         </div>
     </section>
 
-    <!-- SLIDE 15: CTA -->
+    <!-- SLIDE 18: CTA -->
     <section class="slide-dark cta-section">
         <h2>Ready to Build the Industry Leading AI Visual Discovery Platform ?</h2>
         <p style="margin-bottom: 8px;"><strong>Next Steps :</strong></p>
@@ -1878,7 +1847,7 @@
             <button class="nav-prev" onclick="prevSlide()" aria-label="Previous slide">
                 <i data-lucide="chevron-left"></i>
             </button>
-            <span class="slide-counter">1 / 15</span>
+            <span class="slide-counter">1 / 18</span>
             <button class="nav-next" onclick="nextSlide()" aria-label="Next slide">
                 <i data-lucide="chevron-right"></i>
             </button>
